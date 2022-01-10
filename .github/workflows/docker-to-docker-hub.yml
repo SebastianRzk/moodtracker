@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./frontend/
-          file: ./Dockerfile
+          file: ./frontend/Dockerfile
           platforms: linux/amd64
           builder: ${{ steps.buildx.outputs.name }}
           push: true
@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./server/
-          file: ./Dockerfile
+          file: ./server/Dockerfile
           platforms: linux/amd64
           builder: ${{ steps.buildx.outputs.name }}
           push: true
