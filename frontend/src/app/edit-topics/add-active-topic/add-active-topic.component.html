@@ -1,0 +1,28 @@
+<h2>New topic</h2>
+<mat-card>
+    <p>
+        <mat-form-field appearance="fill" class="fill">
+            <mat-label>Name</mat-label>
+            <input matInput value="" [(ngModel)]="name">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill" class="fill">
+            <mat-label>Order</mat-label>
+            <input matInput type="number" [(ngModel)]="order">
+        </mat-form-field>
+    </p>
+    <p> 
+        Topic type (can not be changed later):
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="fill" [(ngModel)]="selectedType">
+            <mat-radio-button class="fill first" value="0">boolean value, can store true/false</mat-radio-button>
+            <mat-radio-button class="fill" value="1">integer_number, can store positive and negative integers</mat-radio-button>
+            <mat-radio-button class="fill" value="2">short_text: can store single line texts (up to 100 characters)</mat-radio-button>
+            <mat-radio-button class="fill" value="3">long_text: can store multi line texts (with no character limit)</mat-radio-button>
+            <mat-radio-button class="fill" value="4">dynamic_checklist, can store checklists with dynamic item count </mat-radio-button>
+            <mat-radio-button class="fill" value="5">timedelta, stores two timestamps and presents the difference</mat-radio-button>
+            <mat-radio-button class="fill" value="6">mood, can store your mood in steps [1,2,3,4,5,6]</mat-radio-button>
+        </mat-radio-group>
+    </p>
+    <button mat-flat-button class="fill" (click)="createTopic()">Create new topic</button>
+</mat-card>

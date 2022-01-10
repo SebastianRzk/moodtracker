@@ -1,0 +1,58 @@
+mat-sidenav {
+    width: 20ex;
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    padding-top: 1.5ex;
+    padding-bottom: 1.5ex;
+}
+
+.left {
+    float: right;
+    margin-right: 1ex;
+}
+
+.flat-menu-item {
+    border: none;
+    background-color: white;
+}
+
+.mobile-menu {
+    width: 100%;
+    margin-bottom: 3ex;
+}
+
+@media (min-width: 75rem) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 75rem) {
+    .slim-menu {
+        display: none;
+    }
+}
+
+.main-menu {
+    padding: 2ex;
+}
+
+.logo {
+    padding: 3ex;
+    text-align: center;
+}
+
+.menu-item > mat-icon {
+    padding-right: 1ex;
+}
+
+.menu-item-text {
+    padding-top: 0.5ex;
+}
+
+.open-menu {
+    padding: 1ex;
+}

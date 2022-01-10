@@ -1,0 +1,37 @@
+mat-card {
+    margin-bottom: 3ex;
+}
+
+.fill {
+    width: 100%;
+}
+
+p {
+    text-align: start;
+}
+
+button {
+    margin-left: 1.5ex;
+    border: lightgray;
+    border-radius: 0.5ex;
+}
+
+mat-icon {
+    padding: 0.6ex;
+}
+
+.position-right {
+    float: right;
+}
+
+@media (min-width: 75rem) {
+    .small-width {
+        width: 75%;
+    }
+}
+
+@media (max-width: 75rem) {
+    .small-width {
+        width: 100%;
+    }
+}

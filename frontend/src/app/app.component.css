@@ -1,0 +1,16 @@
+.main-content-area {
+    min-width: 20ex;
+    max-width: 80ex;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+}
+
+mat-drawer-container {
+    background-color: white;
+}
+
+.app {
+    padding-top: 3ex;
+    padding-bottom: 3ex;
+}

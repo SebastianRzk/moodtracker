@@ -1,0 +1,4 @@
+<mat-form-field appearance="fill">
+  <mat-label>{{topic.name}}</mat-label>
+  <input matInput value="{{data.text}}" (input)="onUserChanges($event.target.value)">
+</mat-form-field>

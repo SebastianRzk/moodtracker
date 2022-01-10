@@ -1,0 +1,9 @@
+<p class="topics">
+  <app-daily-long-text *ngIf="topic.type == types.long_text" [topic]="topic" [data]="data" class="daily-record"></app-daily-long-text>
+  <app-daily-short-text *ngIf="topic.type == types.short_text" [topic]="topic" [data]="data" class="daily-record"></app-daily-short-text>
+  <app-daily-checkbox *ngIf="topic.type == types.boolean" [topic]="topic" [data]="data" class="daily-record"></app-daily-checkbox>
+  <app-daily-integer *ngIf="topic.type == types.integer_number" [topic]="topic" [data]="data" class="daily-record"></app-daily-integer>
+  <app-daily-dynamic-checklist *ngIf="topic.type == types.dynamic_checklist" [topic]="topic" [data]="data" class="daily-record"></app-daily-dynamic-checklist>
+  <app-daily-time-delta *ngIf="topic.type == types.time_delta" [topic]="topic" [data]="data" class="daily-record"></app-daily-time-delta>
+  <app-daily-mood *ngIf="topic.type == types.mood" [topic]="topic" [data]="data" class="daily-record"></app-daily-mood>
+</p>

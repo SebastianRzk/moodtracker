@@ -1,0 +1,6 @@
+flask>2
+Flask-OIDC
+mariadb>1
+alembic>=1.7.5
+pymysql>1
+Flask-SQLAlchemy>2.5.0

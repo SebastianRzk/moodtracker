@@ -1,0 +1,4 @@
+<div class="mat-h1">{{greeter}}</div>
+<p>
+  <app-daily-record *ngFor="let topic of topics$ | async" [topic]="topic"></app-daily-record>
+</p>

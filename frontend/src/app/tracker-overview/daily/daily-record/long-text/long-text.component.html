@@ -1,0 +1,6 @@
+<form [formGroup]="mainFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>{{topic.name}}</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..." formControlName="longTextField" (input)="onUserChanges($event.target.value)"></textarea>
+  </mat-form-field>
+</form>

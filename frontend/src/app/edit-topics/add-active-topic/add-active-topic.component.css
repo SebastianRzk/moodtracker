@@ -1,0 +1,19 @@
+.fill {
+    width: 100%;
+}
+
+mat-radio-button {
+    padding-bottom: 2ex;
+}
+
+button {
+    padding: 1ex;
+}
+
+p {
+    text-align: start;
+}
+
+.first {
+    margin-top: 1ex;
+}

@@ -1,0 +1,17 @@
+
+<div *ngIf="menuEnabled">
+  <mat-drawer #drawerlargemain mode="side" [opened]="false" class="main-menu">
+    <h1 class="logo">M</h1>
+    <p>Welcome to the mood app,</p>
+    <p class="left"><em>{{user.name}}</em> !</p>
+    <button mat-flat-button (click)="drawerlargemain.toggle() && drawersmallmain.toggle()" class="menu-item flat-menu-item"><mat-icon>arrow_back</mat-icon></button>
+    <button mat-flat-button class="menu-item flat-menu-item" (click)="toOverview()"><mat-icon>dashboard</mat-icon><div class="menu-item-text">Overview</div></button>
+    <button mat-flat-button class="menu-item flat-menu-item" (click)="toEditTopic()"><mat-icon>edit</mat-icon><div class="menu-item-text">Edit topics</div></button>
+    <button mat-flat-button class="menu-item flat-menu-item" (click)="logout()"><mat-icon>logout</mat-icon><div class="menu-item-text">Logout</div></button>
+  </mat-drawer>
+  <button mat-flat-button (click)="drawerlargemain.toggle()" class="mobile-menu flat-menu-item"><mat-icon>menu</mat-icon></button>
+  <mat-drawer #drawersmallmain mode="side" [opened]="true" class="slim-menu"> 
+    <h1>M</h1>
+    <button mat-rised-button (click)="drawerlargemain.toggle() && drawersmallmain.toggle()" class="menu-item flat-menu-item"><mat-icon class="open-menu">menu</mat-icon></button>
+  </mat-drawer>
+</div>

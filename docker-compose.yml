@@ -1,0 +1,52 @@
+
+version: '3.1'
+
+services:
+
+  moodtracker-db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_USER: moodtracker-user
+      MYSQL_PASSWORD: moodtracker-pw
+      MYSQL_DATABASE: moodtracker-db
+#    ports:
+#      - 3306:3306
+    networks:
+      - internal-network
+    healthcheck:
+      start_period: 10s
+      test: "/usr/bin/mysql --user=root --password=example --execute \"SHOW DATABASES;\""
+      timeout: 20s
+      retries: 10
+ 
+ moodtracker-frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+    networks:
+      - internal-network
+    depends_on:
+      - "moodtracker-backend"
+
+  moodtracker-backend:
+    build: ./server
+#    ports:
+#      - 5000:5000
+    networks:
+      - internal-network
+    volumes:
+      - ./client_secrets.json:/app/client_secrets.json:ro
+    environment:
+      MOODTRACKER_OIDC_VALID_ISSUER: https://my.auth.server/application/o/moodtracker/
+      MOODTRACKER_OIDC_SECRET: changemechangeme
+      MOODTRACKER_OIDC_REALM: moodtracker
+      MOODTRACKER_SERVER_URL: dev.local
+    depends_on:
+      moodtracker-db:
+        condition: service_healthy
+
+networks:
+  internal-network:
+  

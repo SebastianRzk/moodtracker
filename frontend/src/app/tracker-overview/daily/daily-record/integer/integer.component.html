@@ -1,0 +1,6 @@
+<form [formGroup]="mainFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>{{topic.name}}</mat-label>
+    <input matInput value="" type="number" formControlName="intField" (input)="onUserChanges($event.target.value)">
+  </mat-form-field>
+</form>

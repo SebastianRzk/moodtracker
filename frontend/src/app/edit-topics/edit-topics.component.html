@@ -1,0 +1,29 @@
+<app-add-active-topic></app-add-active-topic>
+<h2>Active Topics</h2>
+<mat-card *ngFor="let topic of activeTopics | async">
+    <p>
+        <mat-form-field appearance="fill" class="small-width">
+            <mat-label>Name</mat-label>
+            <input matInput value="{{topic.name}}" (input)="onNameChange(topic, $event.target.value)">
+        </mat-form-field>
+        <button mat-flat-button class="position-right" (click)="deleteTopic(topic)" ><mat-icon>delete</mat-icon></button>
+        <button mat-flat-button class="position-right" (click)="archiveTopic(topic)"><mat-icon>archive</mat-icon></button>
+    </p>
+    <p>
+        <mat-form-field appearance="fill" class="fill">
+            <mat-label>Order</mat-label>
+            <input matInput value="{{topic.order}}" (input)="onOrderChange(topic, $event.target.value)" type="number">
+        </mat-form-field>
+    </p>
+    <p>Id: {{topic.id}}</p>
+    <p>Type: {{TopicType[topic.type]}}</p>
+</mat-card>
+<h2>Archived Topics</h2>
+<mat-card *ngFor="let topic of archivedTopics | async">
+    <p>{{topic.name}}   
+        <button mat-flat-button class="position-right" (click)="deleteTopic(topic)"><mat-icon>delete</mat-icon></button>
+        <button mat-flat-button class="position-right" (click)="unArchiveTopic(topic)"><mat-icon>unarchive</mat-icon></button></p>
+    <p>Order: {{topic.order}}</p>
+    <p>Id: {{topic.id}}</p>
+    <p>Type: {{TopicType[topic.type]}}</p>
+</mat-card>

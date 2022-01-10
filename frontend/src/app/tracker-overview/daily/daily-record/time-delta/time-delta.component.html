@@ -1,0 +1,17 @@
+<form>
+    {{topic.name}}:
+    <mat-form-field appearance="fill">
+        <mat-label>Begin</mat-label>
+        <input matInput [ngxTimepicker]="pickerFrom" [format]="24" [value]="from">
+        <ngx-material-timepicker #pickerFrom (timeSet)="updateFrom($event)"></ngx-material-timepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>End</mat-label>
+        <input matInput [ngxTimepicker]="pickerTo" [format]="24" [value]="to">
+        <ngx-material-timepicker #pickerTo (timeSet)="updateTo($event)"></ngx-material-timepicker>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Time delta</mat-label>
+        <input matInput disabled value="{{delta}}">
+    </mat-form-field>
+</form>

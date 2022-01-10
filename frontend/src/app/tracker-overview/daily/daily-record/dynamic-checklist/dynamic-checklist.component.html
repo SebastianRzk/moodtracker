@@ -1,0 +1,14 @@
+<form class="wide">
+    {{topic.name}}:
+    <div *ngFor="let element of parsedData.elements; let indexOfElement=index;">
+        <div>
+            <mat-checkbox [checked]="element.checked" (input)="checked(indexOfElement, $event.target.checked)"></mat-checkbox>
+            <mat-form-field appearance="standard">
+                <input matInput [value]="element.name" (focusout)="focusOut(indexOfElement)" (input)="element.name = $event.target.value">
+            </mat-form-field>
+        </div>
+    </div>
+    <div>
+        <button mat-raised-button (click)="add()" class="menu-item, flat-menu-item"><mat-icon>add</mat-icon></button>
+    </div>
+</form>

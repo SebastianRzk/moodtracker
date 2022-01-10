@@ -1,0 +1,19 @@
+.wide {
+    width: 100%;
+    text-align: left;
+    margin-top: 3ex;
+}
+
+mat-checkbox {
+    padding-left: 3ex;
+    margin-top: 1ex;
+    padding-right: 1ex;
+}
+
+mat-form-field {
+    width: 80%;
+}
+
+button {
+    margin-left: 3ex;
+}

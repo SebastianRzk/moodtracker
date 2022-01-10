@@ -1,0 +1,18 @@
+<div>
+  <div [formGroup]="viewSelection">
+    <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color" formControlName="sizeControl">
+      <div *ngFor="let element of selection_item">
+        <mat-button-toggle *ngIf="element.enabled" value="{{element.id}}">{{element.name}}</mat-button-toggle>
+        <mat-button-toggle *ngIf="!element.enabled" value="{{element.id}}" disabled>{{element.name}}</mat-button-toggle>
+      </div>
+    </mat-button-toggle-group>
+  </div>
+  <div class="date-area">
+    <app-date-changer></app-date-changer>
+  </div>
+  <div class="value-area">
+    <app-daily *ngIf="viewSelection.value.sizeControl == '1'"></app-daily>
+    <app-three-day *ngIf="viewSelection.value.sizeControl == '2'"></app-three-day>
+    <app-week *ngIf="viewSelection.value.sizeControl == '3'"></app-week>
+  </div>
+</div>

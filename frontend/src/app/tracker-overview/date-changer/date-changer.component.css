@@ -1,0 +1,31 @@
+.full-width {
+    width: 100%;
+    min-height: 4ex;
+}
+
+.position-left {
+    float: left;
+}
+
+.position-right {
+    float: right;
+}
+
+.position-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    padding: 1ex;
+}
+
+.bottom {
+    margin-top: -4ex;
+}
+
+.date-changer {
+    display: inline;
+    min-height: 4ex;
+    height: 4ex;
+}

@@ -1,0 +1,7 @@
+
+<p>{{topic.name}}:</p>
+<div>
+    <mat-icon (click)="minus()">sentiment_dissatisfied</mat-icon>
+    <mat-slider min="1" max="6" step="1" value="{{data.number}}" (input)="onChange($event.value)"></mat-slider>
+    <mat-icon (click)="plus()">sentiment_very_satisfied</mat-icon>
+</div>
