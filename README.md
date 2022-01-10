@@ -14,6 +14,8 @@ Track...
 * ... numbers
 * ... check-lists
 
+![alt text](https://github.com/sebastianrzk/moodtracker/blob/master/docs/overview.png?raw=true)
+![alt text](https://github.com/sebastianrzk/moodtracker/blob/master/docs/edit.png?raw=true)
 
 ## How to run
 
