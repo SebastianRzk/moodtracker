@@ -19,6 +19,13 @@ Track...
 
 ## How to run
 
+### Use existing docker images
+
+Modify the `docker-compose.yml` to use this prebuilt images:
+
+* [sebastianrzk/moodtracker-frontend](https://registry.hub.docker.com/r/sebastianrzk/moodtracker-frontend)
+* [sebastianrzk/moodtracker-backend](https://registry.hub.docker.com/r/sebastianrzk/moodtracker-backend)
+
 ### Step 1 : Update parameters
 
 * Have an oidc provider configured (realm + client id + client secret + all urls)
